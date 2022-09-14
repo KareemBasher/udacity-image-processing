@@ -5,8 +5,8 @@ import app from '../index'
 const request = supertest(app)
 
 describe('Test endpoint response', () => {
-  it('tests hello world endpoint', async () => {
-    const response = await request.get('/')
+  it('tests server endpoint', async () => {
+    const response = await request.get('/api/images')
     expect(response.status).toBe(200)
   })
 })

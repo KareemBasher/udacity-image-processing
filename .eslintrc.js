@@ -14,7 +14,12 @@ module.exports = {
   rules: {
     semi: ['error', 'never'],
     'no-use-before-define': ['error', { functions: true, classes: true }],
-    'prettier/prettier': 2, // Means error
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
+      }
+    ], // Means error
     'no-var': 'error',
     'prefer-const': 'error'
   }

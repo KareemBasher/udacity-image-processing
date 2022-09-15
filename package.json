@@ -9,7 +9,7 @@
     "clean": "rimraf build/",
     "build": "npx tsc",
     "start": "npm run build && nodemon build/index.js",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "prettier": "prettier --config .prettierrc src/**/*.{ts,tsx,js,jsx} --write",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],

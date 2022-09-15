@@ -5,7 +5,7 @@ First project in the Udacity Web Development Advanced Track.
 Objective is to create an API that when visited with a query of a file name, a width, and a height, the API serves that image with the dimensions requested. upon visiting the API again with the same query, the API should return a cached image and not to reprocess the image once more.
 
 ## Available Scripts
-* `Install` installs all required modules.
+* `npm install` installs all required modules.
 
 * `npm run dev` runs the nodemon module on 'index.ts'.
 

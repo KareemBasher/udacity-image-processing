@@ -10,7 +10,6 @@ const port = 3000
 const app: Application = express()
 // HTTP request logger middleware
 app.use(morgan('short'))
-app.use(express.static('../assets'))
 
 // add routing for /api/images path
 app.get('/api/images', async (req: Request, res: Response): Promise<void> => {

@@ -1,10 +1,6 @@
 import fs from 'fs-extra'
 
-const validate = async (
-  path: string,
-  width: number,
-  height: number
-): Promise<string | boolean | Error> => {
+const validate = async (path: string, width: number, height: number): Promise<string | boolean> => {
   try {
     // Validating the input file
     if (!(await fs.pathExists(path))) return 'Input file does not exist.'

@@ -2,7 +2,12 @@ import fs from 'fs-extra'
 import path from 'path'
 import sharp from 'sharp'
 
-const resize = async (name: string, width: number, height: number) => {
+interface Result {
+  result: boolean
+  error?: unknown
+}
+
+const resize = async (name: string, width: number, height: number): Promise<Result> => {
   const filePath = path.join(__dirname, '../../assets/full', `${name}.jpg`)
   const thumbPath = path.join(__dirname, '../../assets/thumb')
   const output = `${thumbPath}/${name}_${width}_${height}.jpg`

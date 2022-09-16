@@ -13,7 +13,7 @@ app.use(morgan('short'))
 app.use(express.static('../assets'))
 
 // add routing for /api/images path
-app.get('/api/images', async (req: Request, res: Response) => {
+app.get('/api/images', async (req: Request, res: Response): Promise<void> => {
   const filename = req.query.filename as string
   const width: number = parseInt(req.query.width as string)
   const height: number = parseInt(req.query.height as string)
